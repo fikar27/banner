@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Futuristic Banner</title>
+    <style>
+        /* Gaya CSS untuk banner */
+        .banner {
+            background-color: #222;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            border-radius: 10px;
+            transform: perspective(800px) rotateX(20deg);
+            transition: transform 0.5s ease;
+        }
+
+        .banner:hover {
+            transform: perspective(800px) rotateX(0deg);
+        }
+
+        .banner:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .banner:hover:before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        Welcome to the Future!
+    </div>
+</body>
+</html>
